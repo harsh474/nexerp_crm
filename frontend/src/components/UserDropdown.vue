@@ -83,6 +83,7 @@ const dropdownItems = computed(() => {
 
   items.forEach((item) => {
     if (item.hidden) return
+    if (['app_selector', 'about'].includes(item.name1)) return
     if (item.type !== 'Separator') {
       _dropdownItems[_dropdownItems.length - 1].items.push(
         dropdownItemObj(item),

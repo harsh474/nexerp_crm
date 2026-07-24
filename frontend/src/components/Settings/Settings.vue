@@ -211,7 +211,7 @@ const tabs = computed(() => {
           icon: 'home',
         },
       ],
-      condition: () => isManager(),
+      condition: () => false,
     },
     {
       label: __('Integrations', null, 'FCRM'),

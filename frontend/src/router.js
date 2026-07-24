@@ -131,6 +131,50 @@ const routes = [
     component: () => import('@/pages/Welcome.vue'),
   },
   {
+    path: '/projects',
+    name: 'Projects',
+    component: () => import('@/pages/Projects.vue'),
+  },
+  {
+    path: '/projects/:projectId',
+    name: 'ProjectDetail',
+    component: () => import('@/pages/ProjectDetail.vue'),
+    props: true,
+  },
+  {
+    path: '/properties',
+    name: 'Properties',
+    component: () => import('@/pages/Properties.vue'),
+  },
+  {
+    path: '/properties/:unitId',
+    name: 'PropertyDetail',
+    component: () => import('@/pages/PropertyDetail.vue'),
+    props: true,
+  },
+  {
+    path: '/site-visits',
+    name: 'SiteVisits',
+    component: () => import('@/pages/SiteVisits.vue'),
+  },
+  {
+    path: '/site-visits/:visitId',
+    name: 'SiteVisitDetail',
+    component: () => import('@/pages/SiteVisitDetail.vue'),
+    props: true,
+  },
+  {
+    path: '/bookings',
+    name: 'Bookings',
+    component: () => import('@/pages/Bookings.vue'),
+  },
+  {
+    path: '/bookings/:bookingId',
+    name: 'BookingDetail',
+    component: () => import('@/pages/BookingDetail.vue'),
+    props: true,
+  },
+  {
     path: '/onboarding',
     name: 'Onboarding',
     component: () => import('@/pages/PersonaForm.vue'),
