@@ -31,7 +31,7 @@
             <router-link
               v-if="item.value"
               :to="{ name: 'PropertyDetail', params: { unitId: item.value } }"
-              class="truncate text-base text-ink-blue-3 hover:underline"
+              class="truncate text-base text-ink-gray-9 hover:underline"
               @click.stop
             >
               {{ item.value }}
@@ -41,7 +41,7 @@
             <router-link
               v-if="item.value"
               :to="{ name: 'Deal', params: { dealId: item.value } }"
-              class="truncate text-base text-ink-blue-3 hover:underline"
+              class="truncate text-base text-ink-gray-9 hover:underline"
               @click.stop
             >
               {{ item.value }}
