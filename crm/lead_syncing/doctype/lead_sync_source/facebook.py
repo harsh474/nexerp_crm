@@ -40,7 +40,9 @@ class FacebookSyncSource:
 
 	def sync_single_lead(self, lead, raise_exception=False):
 		question_to_field_map = self.get_form_questions_mapping()
-		lead_data = {item["name"]: item["values"][0] for item in lead["field_data"]}
+		lead_data = {
+			item["name"]: item["values"][0] for item in lead["field_data"] if item.get("values")
+		}
 		crm_lead_data = {
 			question_to_field_map.get(k): v for k, v in lead_data.items() if k in question_to_field_map
 		}
